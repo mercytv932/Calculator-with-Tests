@@ -19,6 +19,7 @@ function App() {
       <button onClick={() => setDisplay(display + '+')}>+</button> <button onClick={() => setDisplay(display + '-')}>-</button>
        <button onClick={() => setDisplay(display + '*')}>x</button> <button onClick={()=> setDisplay(display +'/')}>÷</button>
         <button onClick={() => setDisplay(String(eval(display)))}>=</button> <button onClick={()=> setDisplay('0')}>C</button>
+        <button onClick={() => setDisplay(display.length > 1 ? display.slice(0, -1) : '0')}>Del</button>
     </div> 
 
     </div>
