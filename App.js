@@ -1,16 +1,25 @@
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+
+  const [display, setDisplay] = useState('0');
+  
   return (
     <div className="Calculator">
-      <div className="display">0</div>
+      <div className="display">{display}</div>
       <div className="buttons">
-      <button>1</button> <button>2</button> <button>3</button> <button>4</button> <button>5</button>
-      <button>6</button> <button>7</button> <button>8</button> <button>9</button> <button>0</button>
+      <button onClick={() => setDisplay(display +'1')}>1</button> <button onClick={() => setDisplay(display +'2')}>2</button>
+       <button onClick={() => setDisplay(display +'3')}>3</button> <button onClick={() => setDisplay(display +'4')}>4</button> 
+       <button onClick={() => setDisplay(display +'5')}>5</button>
+      <button onClick={() => setDisplay(display +'6')}>6</button> <button onClick={() => setDisplay(display +'7')}>7</button>
+       <button onClick={() => setDisplay(display +'8')}>8</button> <button onClick={() => setDisplay(display +'9')}>9</button>
+        <button onClick={() => setDisplay(display +'0')}>0</button>
 
-      <button>+</button> <button>-</button> <button>x</button> <button>÷</button> <button>=</button> 
-      <button>C</button>
-    </div>
+      <button onClick={() => setDisplay(display + '+')}>+</button> <button onClick={() => setDisplay(display + '-')}>-</button>
+       <button onClick={() => setDisplay(display + '*')}>x</button> <button onClick={()=> setDisplay(display +'/')}>÷</button>
+        <button onClick={() => setDisplay(String(eval(display)))}>=</button> <button onClick={()=> setDisplay('0')}>C</button>
+    </div> 
 
     </div>
   );
