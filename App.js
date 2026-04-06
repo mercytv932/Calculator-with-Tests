@@ -9,8 +9,8 @@ function App() {
     <div className="Calculator">
       <div className="display">{display}</div>
       <div className="buttons">
-      <button onClick={() => setDisplay(display +'1')}>1</button> <button onClick={() => setDisplay(display +'2')}>2</button>
-       <button onClick={() => setDisplay(display +'3')}>3</button> <button onClick={() => setDisplay(display +'4')}>4</button> 
+      <button onClick={() => setDisplay (display === '0' ? '1' : display + '1')}>1</button> <button onClick={() => setDisplay(display +'2')}>2</button>
+       <button onClick={() => setDisplay(display === '0' ? '2' : display + '2')}>3</button> <button onClick={() => setDisplay(display +'4')}>4</button> 
        <button onClick={() => setDisplay(display +'5')}>5</button>
       <button onClick={() => setDisplay(display +'6')}>6</button> <button onClick={() => setDisplay(display +'7')}>7</button>
        <button onClick={() => setDisplay(display +'8')}>8</button> <button onClick={() => setDisplay(display +'9')}>9</button>
