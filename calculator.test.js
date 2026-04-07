@@ -21,3 +21,22 @@ test('divide two numbers', () => {
 test('divide by zero', () =>{
   expect(divide(6,0)).toBe(Infinity);
 })
+
+
+
+test('adds negative numbers', () => {
+  expect(add(-1, -1)).toBe(-2);
+});
+
+test('subtracts to get negative results', () => {
+  expect(subtract(2, 5)).toBe(-3);
+});
+
+test('multiplies by zero', () => {
+  expect(multiply(5, 0)).toBe(0);
+});
+
+test('divides to get a decimal', () => {
+  expect(divide(10, 4)).toBe(2.5);
+});
+
